@@ -1,0 +1,498 @@
+
+/* Базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222232;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Главный блок Hero */
+.hero {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    color: #ff5733;
+    font-size: 13px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Портфолио */
+.portfolio {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.portfolio h2, .about h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: 250px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.portfolio-item.active {
+    border: 3px solid #3498db;
+}
+
+.portfolio-item img, .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* О себе */
+.about {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.red-text {
+    color: #ff5733;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.red-heading {
+    color: #ff5733;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.about-image {
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Карточки навыков */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: #2a2a3d;
+    border: 2px solid #ff5733;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+}
+
+.skill-card h3 {
+    color: #ff5733;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Подвал и кнопки соцсетей */
+footer {
+    text-align: center;
+    padding: 40px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #ff5733;
+    color: #ff5733;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ff5733;
+    color: #ffffff;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .portfolio-grid {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+        width: 220px;
+        height: 270px;
+    }
+
+    .about {
+        padding: 40px 25px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 260px;
+        height: 320px;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 280px;
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+    }
+
+    .portfolio {
+        padding: 40px 10px;
+    }
+
+    .portfolio h2,
+    .about h2 {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        height: 230px;
+    }
+
+    .about {
+        padding: 40px 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        height: 320px;
+    }
+
+    .skills {
+        gap: 15px;
+        padding: 30px 5px;
+    }
+
+    .skill-card {
+        width: calc(50% - 10px);
+        min-width: 140px;
+        padding: 15px 10px;
+    }
+
+    .skill-card h3 {
+        font-size: 16px;
+    }
+
+    .skill-card p {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 30px 10px;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* Маленькие телефоны */
+.race {}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+        height: 280px;
+    }
+
+    .skill-card {
+        width: 100%;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+
+/* Кнопка переключения темы */
+.theme-btn {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #e64a2e;
+}
+
+#searchInput:focus {
+    border-color: #3498db;
+}
+
+/* Плавное изменение темы */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Светлая тема */
+body.light-theme {
+    background-color: #f2f2f2;
+    color: #222232;
+}
+
+body.light-theme nav a {
+    color: #222232;
+}
+
+body.light-theme .skill-card {
+    background-color: #ffffff;
+    border-color: #ff5733;
+}
+
+body.light-theme .skill-card p {
+    color: #555555;
+}
+
+body.light-theme .portfolio-item {
+    background-color: #dddddd;
+}
+
+body.light-theme #searchInput {
+    background-color: #ffffff;
+    color: #222232;
+}
+
+body.light-theme .about-text p:not(.red-text):not(.red-heading) {
+    color: #222232;
+}
+
+.navBar {
+    display: flex;
+}
+.hyperText {
+    display: block;
+}
